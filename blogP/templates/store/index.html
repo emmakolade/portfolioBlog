@@ -1,0 +1,401 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/21fe399584.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicon/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon/favicon-16x16.png' %}"
+    />
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
+
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,200"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <title>Akolade Dev</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <!-- navbar -->
+        <nav>
+          <a href="{% url 'blogP:portpage' %}"><h1>Kolade</h1></a>
+          <!-- <img src="images/Kolade.png" class="logo" /> -->
+          <ul id="menulist">
+            <li><a href="{% url 'blogP:blog' %}">Blog</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#about-move">About</a></li>
+            <li><a href="#about-move">Contact</a></li>
+
+            <i class="fa-solid fa-xmark" id="fas" onclick="closemenu()"></i>
+          </ul>
+          <div class="contact-column">
+            <a class="contact-icon" href="mailto:emmakolade@gmail.com"
+              ><i class="fa-solid fa-envelope" id="icon-up"></i
+            ></a>
+            <a class="contact-icon" href="https://github.com/emmakolade"
+              ><i class="fa-brands fa-github" id="icon-up"></i
+            ></a>
+            <a class="contact-icon" href="https://twitter.com/AkoladeSoft"
+              ><i class="fa-brands fa-twitter" id="icon-up"></i
+            ></a>
+            <a class="contact-icon" href="https://linkedin.com/in/emmakolade"
+              ><i class="fa-brands fa-linkedin-in" id="icon-up"></i
+            ></a>
+          </div>
+          <i
+            class="fa-sharp fa-solid fa-bars"
+            id="fas"
+            onclick="openmenu()"
+          ></i>
+        </nav>
+        <!-- end of navbar -->
+        <div class="header-text">
+          <p>
+            Hi there
+            <span class="material-symbols-outlined"> waving_hand </span>
+          </p>
+          <h1>
+            I am <span class="span-color">Kolade</span>, a Python Developer, I
+            use <span class="span-color">structured</span> technologies to
+            create and design functionalities for web apps.
+          </h1>
+          <span> </span>
+        </div>
+        <div class="box-btn">
+          <a
+            href="https://drive.google.com/file/d/1dbN88LHMe2VVv0DRNHwGpeZzpI2OQRK9/view?usp=share_link"
+            ><button class="btn-down">Download Resume</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio">
+      <div class="container">
+        <h2>PROJECTS</h2>
+        <div class="portfolio-list">
+          {% for project in object_list %}
+          <div class="portfolio-items">
+            <h3>{{project.project_title}}</h3>
+            <h5>{{project.stack}}</h5>
+            <p>{{project.message}}</p>
+            <div class="check-cont">
+              <a href="{{project.check_code}}"
+                ><i class="fa-solid fa-code"></i> Check code</a
+              >
+              <a href="{{project.live_page}}"
+                ><i class="fa-brands fa-chrome"> </i> Live page</a
+              >
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div id="about-move" class="about-cont">
+      <div class="container" id="about-cont">
+        <div class="about">
+          <div class="me">
+            <h2>ABOUT</h2>
+            <p>
+              My name is <span class="span-color">Kolade</span>, I am a Backend
+              Developer. I believe I can make the world a better place by
+              creating tools that increase productivity and solutions that make
+              life easier.
+            </p>
+          </div>
+          <div class="tech-title">
+            <h4>Tech stack I currently use:</h4>
+            <div class="tech-stack">
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-python"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3"></path>
+                  <path
+                    d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3"
+                  ></path>
+                  <path
+                    d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4"
+                  ></path>
+                  <line x1="11" y1="6" x2="11" y2="6.01"></line>
+                  <line x1="13" y1="18" x2="13" y2="18.01"></line>
+                </svg>
+                <span class="caption">Python</span></span
+              >
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-django"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                  <path
+                    d="M12 7v8.5l-2.015 .201a2.715 2.715 0 1 1 0 -5.402l2.015 .201"
+                  ></path>
+                  <path d="M16 7v.01"></path>
+                  <path d="M16 10v5.586c0 .905 -.36 1.774 -1 2.414"></path>
+                </svg>
+                <span class="caption">Django</span></span
+              >
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-javascript"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path d="M7.5 8h3v8l-2 -1"></path>
+                  <path
+                    d="M16.5 8h-2.5a0.5 .5 0 0 0 -.5 .5v3a0.5 .5 0 0 0 .5 .5h1.423a0.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+                  ></path>
+                </svg>
+                <span class="caption">JavaScript</span></span
+              >
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-html5"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path
+                    d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"
+                  ></path></svg
+                ><span class="caption">HTML</span></span
+              >
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-css3"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path
+                    d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"
+                  ></path></svg
+                ><span class="caption">CSS</span>
+              </span>
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-bootstrap"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M2 12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2"
+                  ></path>
+                  <path
+                    d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2"
+                  ></path>
+                  <path
+                    d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4z"
+                  ></path>
+                </svg>
+                <span class="caption">Bootstrap</span>
+              </span>
+              <span class="svg-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-figma"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <circle cx="15" cy="12" r="3"></circle>
+                  <rect x="6" y="3" width="12" height="6" rx="3"></rect>
+                  <path
+                    d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15"
+                  ></path></svg
+                ><span class="caption">Figma</span></span
+              >
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-github"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                  ></path></svg
+                ><span class="caption">GitHub</span></span
+              >
+              <span class="svg-item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-brand-git"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <circle cx="16" cy="12" r="1"></circle>
+                  <circle cx="12" cy="8" r="1"></circle>
+                  <circle cx="12" cy="16" r="1"></circle>
+                  <path d="M12 15v-6"></path>
+                  <path d="M15 11l-2 -2"></path>
+                  <path d="M11 7l-1.9 -1.9"></path>
+                  <path
+                    d="M10.5 20.4l-6.9 -6.9c-.781 -.781 -.781 -2.219 0 -3l6.9 -6.9c.781 -.781 2.219 -.781 3 0l6.9 6.9c.781 .781 .781 2.219 0 3l-6.9 6.9c-.781 .781 -2.219 .781 -3 0z"
+                  ></path></svg
+                ><span class="caption">Git</span></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="contact-left">
+            <h2>CONTACT ME</h2>
+            <p>Got a Job or Project for me? Hit me up</p>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="3"
+                placeholder="Enter Your Message Here..."
+              ></textarea>
+              <div class="box-btn box-btn1">
+                <button class="btn-down btn-send" type="submit">Send It</button>
+              </div>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var menulist = document.getElementById("menulist");
+
+      function openmenu() {
+        menulist.style.right = "0";
+      }
+      function closemenu() {
+        menulist.style.right = "-20rem";
+      }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzO-Hw0yCFkK9ec4TMTItScY1-twMcJwJvmcVFMSJOLmyr8_NJRr6H0-vYVjFsFO3_8/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message Recieved";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

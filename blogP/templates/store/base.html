@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolade Blog</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicon/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon/favicon-16x16.png' %}"
+    />
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
+    <!-- https://fontawesome.com/ -->
+    <script
+      src="https://kit.fontawesome.com/21fe399584.js"
+      crossorigin="anonymous"
+    ></script>
+    {% comment %}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    {% endcomment %}
+    <!-- https://fonts.google.com/ -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/templatemo-xtra-blog.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="tm-header" id="tm-header">
+      <div class="tm-header-wrapper">
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="tm-site-header">
+          <!-- <div class="mb-3 mx-auto tm-site-logo">
+            <i class="fas fa-times fa-2x"></i>
+          </div> -->
+          <h1 class="text-center">Kolade Blog</h1>
+        </div>
+        <nav class="tm-nav" id="tm-nav">
+          <ul>
+            <li class="tm-nav-item">
+              <a href="{% url 'blogP:portpage' %}" class="tm-nav-link">
+                <i class="fa-solid fa-circle"></i>
+                Porfolio
+              </a>
+            </li>
+            <li class="tm-nav-item active">
+              <a href="{% url 'blogP:blog' %}" class="tm-nav-link">
+                <i class="fas fa-home"></i>
+                Blog Home
+              </a>
+            </li>
+            {% comment %}
+            <li class="tm-nav-item">
+              <a href="#" class="tm-nav-link">
+                <i class="fas fa-pen"></i>
+                Single Post
+              </a>
+            </li>
+            {% endcomment %}
+            <li class="tm-nav-item">
+              <a href="#" class="tm-nav-link">
+                <i class="fas fa-users"></i>
+                About Kolade
+              </a>
+            </li>
+            <li class="tm-nav-item">
+              <a href="{% url 'blogP:contact' %}" class="tm-nav-link">
+                <i class="far fa-comments"></i>
+                Contact Me
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="tm-mb-65">
+          <a href="https://twitter.com/AkoladeSoft" class="tm-social-link">
+            <i class="fab fa-twitter tm-social-icon"></i>
+          </a>
+          <a href="https://instagram.com/koladeoflagos" class="tm-social-link">
+            <i class="fab fa-instagram tm-social-icon"></i>
+          </a>
+          <a href="https://linkedin.com/in/emmakolade" class="tm-social-link">
+            <i class="fab fa-linkedin tm-social-icon"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <main class="tm-main">
+        <!-- Search form -->
+        <div class="row tm-row">
+          <div class="col-12">
+            <form action="" class="form-inline tm-mb-80 tm-search-form">
+              <input
+                class="form-control tm-search-input"
+                name="q"
+                type="text"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+              <button class="tm-search-button" type="submit">
+                <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="base-container">
+          {%block content %} {% endblock content %}
+        </div>
+        <div class="row tm-row tm-mt-100 tm-mb-75">
+          <div class="tm-prev-next-wrapper">
+            <a
+              href="#"
+              class="mb-2 tm-btn tm-btn-primary tm-prev-next disabled tm-mr-20"
+              >Prev</a
+            >
+            <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next">Next</a>
+          </div>
+          <div class="tm-paging-wrapper">
+            <span class="d-inline-block mr-3">Page</span>
+            <nav class="tm-paging-nav d-inline-block">
+              <ul>
+                <li class="tm-paging-item active">
+                  <a href="#" class="mb-2 tm-btn tm-paging-link">1</a>
+                </li>
+                <li class="tm-paging-item">
+                  <a href="#" class="mb-2 tm-btn tm-paging-link">2</a>
+                </li>
+                <li class="tm-paging-item">
+                  <a href="#" class="mb-2 tm-btn tm-paging-link">3</a>
+                </li>
+                <li class="tm-paging-item">
+                  <a href="#" class="mb-2 tm-btn tm-paging-link">4</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <footer class="row tm-row">
+          <hr class="col-12" />
+          <div class="col-md-6 col-12 tm-color-gray">
+            Kolade
+            <a
+              rel="nofollow"
+              target="_parent"
+              href="https://templatemo.com"
+              class="tm-external-link"
+              >Blog</a
+            >
+          </div>
+          <div
+            id="copyright"
+            class="col-md-6 col-12 tm-color-gray tm-copyright"
+          >
+            &copy Kolade
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/templatemo-script.js' %}"></script>
+  </body>
+</html>
+
+{% comment %} for django {% now "Y" %} {% endcomment %}
