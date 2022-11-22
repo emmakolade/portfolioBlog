@@ -490,3 +490,209 @@ form textarea {
     font-weight: 600;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  #fas {
+    display: block;
+    font-size: 1.563rem;
+  }
+  .contact-icon {
+    display: none;
+  }
+  nav ul {
+    position: fixed;
+    background: #262421;
+    top: 0;
+    right: -20rem;
+    width: 20rem;
+    height: 100vh;
+    padding-top: 3.125rem;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 1.563rem;
+  }
+  nav ul #fas {
+    position: absolute;
+    top: 1.563rem;
+    left: 1.563rem;
+    cursor: pointer;
+  }
+  nav h1 {
+    font-size: 40px;
+  }
+  #header {
+    height: 35vh;
+  }
+  .header-text{
+    padding-right: 0.625rem;
+  }
+  .header-text p {
+    font-size: 1.2rem;
+  }
+  .header-text h1 {
+    font-size: 1.1rem;
+    padding-top: 0.3rem;
+  }
+
+  .btn-down {
+    width: 100%;
+  }
+  #portfolio {
+    padding-top: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .portfolio-list {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .portfolio-items {
+    margin-bottom: 1.25rem;
+    height: 30vh;
+    /* display: block; */
+  }
+
+  .portfolio-items a {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .portfolio-items p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .portfolio-items h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  #about-cont {
+    display: block;
+    padding-top: 0.625rem;
+  }
+  .about {
+    width: 100%;
+  }
+  .svg-item {
+    padding-top: 0.15rem;
+    width: 4.2rem;
+    height: 4.5rem;
+  }
+  .contact {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .caption {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #fas {
+    display: block;
+    font-size: 1.563rem;
+  }
+  .contact-icon {
+    display: none;
+  }
+  nav ul {
+    position: fixed;
+    background: #262421;
+    top: 0;
+    right: -20rem;
+    width: 20rem;
+    height: 100vh;
+    padding-top: 3.125rem;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 1.563rem;
+  }
+  nav ul #fas {
+    position: absolute;
+    top: 1.563rem;
+    left: 1.563rem;
+    cursor: pointer;
+  }
+  nav h1 {
+    font-size: 40px;
+  }
+  #header {
+    height: 35vh;
+  }
+  .header-text{
+    padding-right: 0.625rem;
+  }
+  .header-text p {
+    font-size: 1.2rem;
+  }
+  .header-text h1 {
+    font-size: 1.1rem;
+    padding-top: 0.3rem;
+  }
+
+  .btn-down {
+    width: 100%;
+  }
+  #portfolio {
+    padding-top: 0.6rem;
+    margin-top: 6.1rem;
+  }
+
+  .portfolio-list {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .portfolio-items {
+    margin-bottom: 1.25rem;
+    height: 35vh;
+    /* display: block; */
+  }
+
+  .portfolio-items a {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .portfolio-items p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .portfolio-items h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  #about-cont {
+    display: block;
+    padding-top: 0.625rem;
+  }
+  .about {
+    width: 100%;
+  }
+  .svg-item {
+    padding-top: 0.15rem;
+    width: 4.2rem;
+    height: 4.5rem;
+  }
+  .contact {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .caption {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
