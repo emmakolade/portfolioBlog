@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import *
+from .models import Post, Project
 from datetime import datetime, date
 from django.db.models import Q
 # Create your views here.
