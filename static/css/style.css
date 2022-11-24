@@ -406,7 +406,9 @@ form textarea {
     display: block;
     font-size: 1.563rem;
   }
-
+  .contact-icon {
+    display: none;
+  }
   nav ul {
     position: fixed;
     background: #262421;
