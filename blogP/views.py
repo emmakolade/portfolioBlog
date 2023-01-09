@@ -8,6 +8,7 @@ from django.db.models import Q
 class Portpage(ListView):
     model = Project
     template_name = 'store/index.html'
+    ordering = ['-id']
 
     # def get_queryset(self):
     #     # original qs
