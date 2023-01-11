@@ -29,7 +29,8 @@ SECRET_KEY = '&vew4rs#1f7@1qx2x*)(e-%t67y8q4i1a*4$93719!+92m(e4q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-8c5e.up.railway.app', '127.0.0.1',]
+ALLOWED_HOSTS = ['web-production-8c5e.up.railway.app',
+                 '127.0.0.1', 'akolade.up.railway.app']
 
 
 # Application definition
