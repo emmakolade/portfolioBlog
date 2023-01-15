@@ -23,10 +23,14 @@ body {
 }
 
 .material-symbols-outlined {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -34,28 +38,38 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
 }
+
 nav {
   display: flex;
   align-items: center;
@@ -64,10 +78,16 @@ nav {
   z-index: 999;
   position: sticky;
 }
+
 nav a {
-  font-size: 4rem;
+
   text-decoration: none;
   color: #d0d6d9;
+}
+
+nav h1 {
+  font-size: 4.1rem;
+
 }
 
 nav ul li {
@@ -85,6 +105,7 @@ nav ul li a {
   font-weight: 600;
   transition: 0.5s;
 }
+
 nav ul li a:hover {
   /*color: #7DF9FF;*/
   color: #bf4136;
@@ -96,6 +117,13 @@ nav ul li a:hover {
   padding-right: 3.125rem;
   font-size: 2rem;
 }
+
+.contact-icons {
+  color: #d0d6d9;
+  padding-right: 3.125rem;
+  font-size: 2rem;
+}
+
 #icon-up:hover {
   transform: translateY(-0.4rem);
 }
@@ -111,20 +139,25 @@ nav ul li a:hover {
   padding-top: 1.5rem;
   padding-bottom: 2rem;
 }
+
 .header-text h1 {
   font-size: 2rem;
   color: #d0d6d9;
 }
+
 .span-color {
   color: #bf4136;
 }
+
 /* btn */
 .box-btn {
   padding-top: 1.25rem;
 }
+
 .box-btn1 {
   padding-top: 0px;
 }
+
 .btn-down {
   line-height: 3.125rem;
   height: 3.125rem;
@@ -139,6 +172,7 @@ nav ul li a:hover {
   transition: all 0.5s;
   position: relative;
 }
+
 .btn-down::before {
   content: "";
   position: absolute;
@@ -150,10 +184,12 @@ nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transition: all 0.3s;
 }
+
 .btn-down:hover::before {
   opacity: 0;
   transform: scale(0.5, 0.5);
 }
+
 .btn-down::after {
   content: "";
   position: absolute;
@@ -168,14 +204,17 @@ nav ul li a:hover {
   border-radius: 0.4rem;
   transform: scale(1.2, 1.2);
 }
+
 .btn-down:hover::after {
   opacity: 1;
   transform: scale(1, 1);
 }
+
 /* portfolio */
 #portfolio {
   padding-top: 4rem;
 }
+
 .portfolio-list {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -186,6 +225,7 @@ nav ul li a:hover {
   /* align-items: center; */
   /* justify-content: center; */
 }
+
 .portfolio-items {
   background: rgba(38, 36, 33, 0.9);
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -196,10 +236,12 @@ nav ul li a:hover {
   border-radius: 0.3rem;
   transition: background 0.5s, transform 0.5s;
 }
+
 .portfolio-items:hover {
   /* background: #fa5b3d; */
   transform: scale(1.1);
 }
+
 .portfolio-items a {
   text-decoration: none;
   color: #bf8069;
@@ -208,20 +250,24 @@ nav ul li a:hover {
   padding-right: 0.625rem;
   /* border-top:0.625rem ; */
 }
+
 .portfolio-items p {
   color: #d0d6d9;
   font-weight: 500;
   /* padding: 0.625rem 0 0.625rem 0; top, right , bottom left */
 }
+
 .portfolio-items h3 {
   color: #bf4136;
   font-weight: 700;
   /* padding: 0.625rem 0 0.625rem 0; top, right , bottom left */
 }
+
 .portfolio-items h5 {
   color: #bf8069;
   /* padding: 0.625rem 0 0.625rem 0; top, right , bottom left */
 }
+
 /* about - contact */
 #about-cont {
   display: flex;
@@ -242,6 +288,7 @@ nav ul li a:hover {
 .contact {
   width: 40%;
 }
+
 .contact-left p {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -275,14 +322,17 @@ form textarea {
   padding-top: 0.75rem;
   transition: 0.5s ease-in-out;
 }
+
 .svg-item:hover {
   color: #bf4136;
   background-color: rgba(178, 190, 200, 0.4);
 }
+
 .caption {
   display: block;
   font-weight: 600;
 }
+
 .tech-title h4 {
   margin-top: 0.75rem;
 }
@@ -295,18 +345,22 @@ form textarea {
   color: #d0d6d9;
   display: block;
 }
+
 /* media screen */
 @media only screen and (max-width: 1540px) {
+
   /* nav ul li {
     margin: 1.2rem;
   } */
   .contact-icon {
     font-size: 1.5rem;
   }
+
   nav a {
     font-size: 2.5rem;
   }
 }
+
 @media only screen and (max-width: 1300px) {
   nav ul li {
     margin: 0rem;
@@ -318,6 +372,7 @@ form textarea {
     display: block;
     font-size: 1.563rem;
   }
+
   /* .contact-icon {
     display: none;
   } */
@@ -332,16 +387,19 @@ form textarea {
     z-index: 2;
     transition: right 0.5s;
   }
+
   nav ul li {
     display: block;
     margin: 1.563rem;
   }
+
   nav ul #fas {
     position: absolute;
     top: 1.563rem;
     left: 1.563rem;
     cursor: pointer;
   }
+
   nav ul {
     position: fixed;
     background: #262421;
@@ -353,39 +411,49 @@ form textarea {
     z-index: 2;
     transition: right 0.5s;
   }
+
   nav h1 {
     font-size: 60px;
   }
+
   #header {
     height: 40vh;
   }
+
   .header-text h1 {
     font-size: 2rem;
   }
+
   #portfolio {
     padding-top: 0.1rem;
     margin-top: 1rem;
   }
+
   .btn-down {
     width: 100%;
     background: transparent;
     color: #d0d6d9;
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
+
   .portfolio-list {
     display: block;
   }
+
   .portfolio-items {
     margin-bottom: 1.25rem;
     height: 20vh;
   }
+
   .portfolio-items p {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
   }
+
   #about-cont {
     display: block;
   }
+
   .about {
     width: 100%;
   }
@@ -396,14 +464,17 @@ form textarea {
     width: 100%;
   }
 }
+
 @media only screen and (max-width: 600px) {
   #fas {
     display: block;
     font-size: 1.563rem;
   }
+
   .contact-icon {
     display: none;
   }
+
   nav ul {
     position: fixed;
     background: #262421;
@@ -415,19 +486,23 @@ form textarea {
     z-index: 2;
     transition: right 0.5s;
   }
+
   nav ul li {
     display: block;
     margin: 1.563rem;
   }
+
   nav ul #fas {
     position: absolute;
     top: 1.563rem;
     left: 1.563rem;
     cursor: pointer;
   }
+
   nav h1 {
     font-size: 60px;
   }
+
   #header {
     height: 40vh;
   }
@@ -439,6 +514,7 @@ form textarea {
   .btn-down {
     width: 100%;
   }
+
   #portfolio {
     padding-top: 0.01rem;
     margin-top: 0.01rem;
@@ -458,12 +534,14 @@ form textarea {
     font-size: 0.7rem;
     font-weight: 600;
   }
+
   .portfolio-items p {
     font-size: 0.9rem;
     font-weight: 600;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
   }
+
   .portfolio-items h3 {
     font-size: 1rem;
     font-weight: 700;
@@ -472,19 +550,380 @@ form textarea {
   #about-cont {
     display: block;
   }
+
   .about {
     width: 100%;
   }
+
   .svg-item {
     padding-top: 0.15rem;
     width: 4.2rem;
     height: 4.5rem;
   }
+
   .contact {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     width: 100%;
   }
+
+  .caption {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #fas {
+    display: block;
+    font-size: 1.563rem;
+  }
+
+  .contact-icon {
+    display: none;
+  }
+
+  nav ul {
+    position: fixed;
+    background: #262421;
+    top: 0;
+    right: -20rem;
+    width: 20rem;
+    height: 100vh;
+    padding-top: 3.125rem;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 1.563rem;
+  }
+
+  nav ul #fas {
+    position: absolute;
+    top: 1.563rem;
+    left: 1.563rem;
+    cursor: pointer;
+  }
+
+  nav h1 {
+    font-size: 40px;
+  }
+
+  #header {
+    height: 35vh;
+  }
+
+  .header-text {
+    padding-right: 0.625rem;
+  }
+
+  .header-text p {
+    font-size: 1.2rem;
+  }
+
+  .header-text h1 {
+    font-size: 1.1rem;
+    padding-top: 0.3rem;
+  }
+
+  .btn-down {
+    width: 100%;
+  }
+
+  #portfolio {
+    padding-top: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .portfolio-list {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .portfolio-items {
+    margin-bottom: 1.25rem;
+    height: 30vh;
+    /* display: block; */
+  }
+
+  .portfolio-items a {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .portfolio-items p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .portfolio-items h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  #about-cont {
+    display: block;
+    padding-top: 0.625rem;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .svg-item {
+    padding-top: 0.15rem;
+    width: 4.2rem;
+    height: 4.5rem;
+  }
+
+  .contact {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #fas {
+    display: block;
+    font-size: 1.563rem;
+  }
+
+  .contact-icon {
+    display: none;
+  }
+
+  nav ul {
+    position: fixed;
+    background: #262421;
+    top: 0;
+    right: -20rem;
+    width: 20rem;
+    height: 100vh;
+    padding-top: 3.125rem;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 1.563rem;
+  }
+
+  nav ul #fas {
+    position: absolute;
+    top: 1.563rem;
+    left: 1.563rem;
+    cursor: pointer;
+  }
+
+  nav h1 {
+    font-size: 40px;
+  }
+
+  #header {
+    height: 35vh;
+  }
+
+  .header-text {
+    padding-right: 0.625rem;
+  }
+
+  .header-text p {
+    font-size: 1.2rem;
+  }
+
+  .header-text h1 {
+    font-size: 1.1rem;
+    padding-top: 0.3rem;
+  }
+
+  .btn-down {
+    width: 100%;
+  }
+
+  #portfolio {
+    padding-top: 0.6rem;
+    margin-top: 6.1rem;
+  }
+
+  .portfolio-list {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .portfolio-items {
+    margin-bottom: 1.25rem;
+    height: 35vh;
+    /* display: block; */
+  }
+
+  .portfolio-items a {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .portfolio-items p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .portfolio-items h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  #about-cont {
+    display: block;
+    padding-top: 0.625rem;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .svg-item {
+    padding-top: 0.15rem;
+    width: 4.2rem;
+    height: 4.5rem;
+  }
+
+  .contact {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #fas {
+    display: block;
+    font-size: 1.563rem;
+  }
+
+  .contact-icon {
+    display: none;
+  }
+
+  nav ul {
+    position: fixed;
+    background: #262421;
+    top: 0;
+    right: -20rem;
+    width: 20rem;
+    height: 100vh;
+    padding-top: 3.125rem;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 1.563rem;
+  }
+
+  nav ul #fas {
+    position: absolute;
+    top: 1.563rem;
+    left: 1.563rem;
+    cursor: pointer;
+  }
+
+  nav h1 {
+    font-size: 40px;
+  }
+
+  #header {
+    height: 35vh;
+  }
+
+  .header-text {
+    padding-right: 0.625rem;
+  }
+
+  .header-text p {
+    font-size: 1.2rem;
+  }
+
+  .header-text h1 {
+    font-size: 1.1rem;
+    padding-top: 0.3rem;
+  }
+
+  .btn-down {
+    width: 100%;
+  }
+
+  #portfolio {
+    padding-top: 0.6rem;
+    margin-top: 8rem;
+  }
+
+  .portfolio-list {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .portfolio-items {
+    margin-bottom: 1.25rem;
+    height: 40vh;
+    /* display: block; */
+  }
+
+  .portfolio-items a {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .portfolio-items p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .portfolio-items h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  #about-cont {
+    display: block;
+    padding-top: 0.625rem;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .svg-item {
+    padding-top: 0.15rem;
+    width: 4.2rem;
+    height: 4.5rem;
+  }
+
+  .contact {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
   .caption {
     font-size: 0.8rem;
     font-weight: 600;
